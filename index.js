@@ -17,7 +17,7 @@ var granimInstance = new Granim({
     direction: 'top-bottom',
     isPausedWhenNotInView: true,
     image : {
-        source: 'assets/back.jpg', //change image for intro section if desired
+        source: 'back.jpg', //change image for intro section if desired
         blendingMode: 'multiply',
         imageStretch: true // Set this option to stretch the image
     },
@@ -307,3 +307,4 @@ window.onclick = function(event) {
     modalHobby6.style.display = "none";
   }
 }
+
