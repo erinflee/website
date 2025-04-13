@@ -7,7 +7,7 @@ var typewriter = new Typewriter(app, {
 
 typewriter
   .pauseFor(1000)
-  .typeString('I am a data science major at UC Berkeley!') //Add your own tagline
+  .typeString('I am a data science major at UC Berkeley with a concentration in robotics!') //Add your own tagline
   .pauseFor(3000)
   .start()
 
@@ -17,8 +17,9 @@ var granimInstance = new Granim({
     direction: 'top-bottom',
     isPausedWhenNotInView: true,
     image : {
-        source: 'assets/snow.jpg', //change image for intro section if desired
+        source: 'back.jpg', //change image for intro section if desired
         blendingMode: 'multiply',
+        imageStretch: true // Set this option to stretch the image
     },
     states : {
         "default-state": {
@@ -306,3 +307,4 @@ window.onclick = function(event) {
     modalHobby6.style.display = "none";
   }
 }
+
