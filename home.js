@@ -18,7 +18,7 @@ let granimInstance = new Granim({
   direction: "top-bottom",
   isPausedWhenNotInView: true,
   image: {
-    source: "back.jpg", //change image for intro section if desired
+    source: "images/back.jpg", //change image for intro section if desired
     blendingMode: "multiply",
     imageStretch: true, // Set this option to stretch the image
   },
