@@ -1,0 +1,111 @@
+/* navigation bar */
+.navbar {
+  border-top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  z-index: 10;
+}
+
+.navbar a {
+  color: grey;
+  font-size: 18px;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Adds hover effect */
+}
+
+/* main body */
+
+main {
+  text-align: center;
+  width: 100%;
+  padding-top: 80px;
+  padding: 5%;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: black;
+  padding-top: 10px;
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: black;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: black;
+}
+
+/* bottom of page */
+footer {
+  text-align: center;
+  width: 90%;
+  border-top: 2px solid black;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+h4 {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  color: black;
+  font-size: 1rem;
+}
+
+/* social media icons */
+#contact {
+  text-align: center;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-paper-plane {
+  background: #3d348b;
+  color: white;
+  margin-right: 10px;
+}
+
+.fa-instagram {
+  background: #7678ed;
+  color: white;
+  margin-right: 10px;
+}
+
+.fa-linkedin {
+  color: white;
+  background-color: #0077b5;
+  margin-right: 10px;
+}
+
+.fa-github {
+  background: #0973fd;
+  color: white;
+  margin-right: 10px;
+}
