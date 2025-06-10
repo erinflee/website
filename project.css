@@ -19,7 +19,6 @@
 }
 
 /* main body */
-
 main {
   text-align: center;
   width: 100%;
@@ -28,27 +27,115 @@ main {
 }
 
 h1 {
-  font-family: "Rubik", sans-serif;
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: bold;
   color: black;
-  padding-top: 10px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.row {
+  width: 100%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px 30px;
+}
+
+/* left side */
+.left-1 {
+  overflow: hidden;
+}
+
+.team-image {
+  padding-bottom: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+/* right side */
+.right-1 {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  overflow: hidden;
+}
+
+.projects {
+  padding-left: 20px;
 }
 
 h2 {
-  font-family: "Rubik", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: black;
+  padding-top: 10px;
   padding-bottom: 10px;
-  text-align: left;
+  line-height: 26px;
+  font-size: 1.8rem;
+  color: black;
+}
+
+h3 {
+  line-height: 26px;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  color: black;
 }
 
 p {
-  font-family: "Rubik", sans-serif;
+  line-height: 26px;
+  padding-bottom: 15px;
   font-size: 1.2rem;
-  font-weight: 400;
   color: black;
+}
+
+/* applies when size is smaller than 991 px for .projects class*/
+@media (max-width: 991px) {
+  .projects {
+    padding-left: 0;
+  }
+}
+
+/* applies when size is smaller than 768 px for .row class */
+@media (max-width: 768px) {
+  .row {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .left-1 {
+    order: 2;
+  }
+
+  .right-1 {
+    order: 1;
+  }
+
+  .left {
+    order: 4;
+  }
+
+  .right {
+    order: 3;
+  }
+}
+
+.pcr-image {
+  padding-bottom: 50px;
+  width: 100%;
+  height: 100%;
 }
 
 /* bottom of page */
@@ -66,46 +153,4 @@ h4 {
   padding-bottom: 5px;
   color: black;
   font-size: 1rem;
-}
-
-/* social media icons */
-#contact {
-  text-align: center;
-}
-
-.fa {
-  padding: 20px;
-  font-size: 20px;
-  width: 60px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa-paper-plane {
-  background: #3d348b;
-  color: white;
-  margin-right: 10px;
-}
-
-.fa-instagram {
-  background: #7678ed;
-  color: white;
-  margin-right: 10px;
-}
-
-.fa-linkedin {
-  color: white;
-  background-color: #0077b5;
-  margin-right: 10px;
-}
-
-.fa-github {
-  background: #0973fd;
-  color: white;
-  margin-right: 10px;
 }
