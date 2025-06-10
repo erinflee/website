@@ -101,7 +101,7 @@ p {
   color: black;
 }
 
-/* applies when size is smaller than 991 px for .projects class*/
+/* applies when size is smaller than 991 px for .projects class */
 @media (max-width: 991px) {
   .projects {
     padding-left: 0;
