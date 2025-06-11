@@ -2,7 +2,7 @@
 #canvas-image-blending {
   position: absolute;
   width: 100%;
-  height: 750px;
+  height: 750px; /* Viewport height */
   top: 0;
   bottom: 0;
 }
