@@ -1,43 +1,45 @@
-// Skincare Recommendation System Modal
-const openSkincareButton = document.getElementById("open-s");
-const modalSkincareContainer = document.getElementById("modal-s");
-const closeSkincareButton = document.getElementById("close-s");
+// Get the modal
+let modal_skincare = document.getElementById("modal-skincare");
+let modal_arduino = document.getElementById("modal-arduino");
 
-console.log("Skincare open button:", openSkincareButton);
-console.log("Skincare modal container:", modalSkincareContainer);
-console.log("Skincare close button:", closeSkincareButton); // Check if this is null or an element
+// Get the button that opens the modal
+let open_skincare = document.getElementById("open-skincare");
+let open_arduino = document.getElementById("open-arduino");
 
-// Arduino PCR COVID-19 Detector Modal
-const openArduinoButton = document.getElementById("open-arduino");
-const modalArduinoContainer = document.getElementById("modal-arduino");
-const closeArduinoButton = document.getElementById("close-arduino");
+// Get the <span> element that closes the modal
+let span_skincare = document.getElementsByClassName("close-skincare")[0];
+let span_arduino = document.getElementsByClassName("close-arduino")[0];
 
-console.log("Arduino open button:", openArduinoButton);
-console.log("Arduino modal container:", modalArduinoContainer);
-console.log("Arduino close button:", closeArduinoButton);
+// When the user clicks on the button, open the modal
+open_skincare.onclick = function () {
+  modal_skincare.style.display = "block";
+};
 
-// Event listener to OPEN the Skincare modal
-openSkincareButton.addEventListener("click", () => {
-  console.log("Skincare open button clicked!"); // Check if this logs
-  modalSkincareContainer.classList.add("show");
-  document.body.style.overflow = "auto";
-});
+// When the user clicks on <span> (x), close the modal
+span_skincare.onclick = function () {
+  modal_skincare.style.display = "none";
+};
 
-// Event listener to CLOSE the Skincare modal
-closeSkincareButton.addEventListener("click", () => {
-  console.log("Skincare close button clicked!"); // This is the crucial one to check
-  modalSkincareContainer.classList.remove("show");
-  document.body.style.overflow = "auto";
-});
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal_skincare) {
+    modal_skincare.style.display = "none";
+  }
+};
 
-// Event listener to OPEN the Arduino modal
-openArduinoButton.addEventListener("click", () => {
-  modalArduinoContainer.classList.add("show");
-  document.body.style.overflow = "auto"; // Prevent scrolling when modal is open
-});
+// When the user clicks on the button, open the modal
+open_arduino.onclick = function () {
+  modal_arduino.style.display = "block";
+};
 
-// Event listener to CLOSE the Arduino modal
-closeArduinoButton.addEventListener("click", () => {
-  modalArduinoContainer.classList.remove("show");
-  document.body.style.overflow = "auto"; // Re-enable scrolling
-});
+// When the user clicks on <span> (x), close the modal
+span_arduino.onclick = function () {
+  modal_arduino.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal_arduino) {
+    modal_arduino.style.display = "none";
+  }
+};
