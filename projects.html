@@ -75,17 +75,28 @@
             scraping before progressing to building the encoder and evaluation
             metrics into an app.
           </p>
-          <p>
-            I'm leading the machine learning development for this project. My
-            work began with web scraping skincare data, including product names,
-            ingredients, and allergens, and transforming it into a structured
-            JSON file. Currently, I'm focused on feeding this data into
-            HuggingFace to convert it into vectors. This will enable comparison
-            searches using prompt engineering, ultimately providing optimal
-            product recommendations based on a user's skin conditions.
-            Meanwhile, our team is integrating the frontend and backend to
-            deploy our skincare recommendation app.
-          </p>
+          <div class="button-container">
+            <button id="open-skincare">Learn More</button>
+
+            <div class="modal" id="modal-skincare">
+              <div class="modal-content">
+                <span class="close-skincare">&times;</span>
+
+                <p>
+                  I'm leading the machine learning development for this project.
+                  My work began with web scraping skincare data, including
+                  product names, ingredients, and allergens, and transforming it
+                  into a structured JSON file. Currently, I'm focused on feeding
+                  this data into HuggingFace to convert it into vectors. This
+                  will enable comparison searches using prompt engineering,
+                  ultimately providing optimal product recommendations based on
+                  a user's skin conditions. Meanwhile, our team is integrating
+                  the frontend and backend to deploy our skincare recommendation
+                  app.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
 
@@ -120,18 +131,28 @@
             information.
           </p>
 
-          <p>
-            I developed an algorithm that computationally simulates the
-            Polymerase Chain Reaction (PCR) process, a fundamental technique in
-            molecular biology for amplifying target DNA sequences. The model
-            replicates the thermal cycling stages of PCR (denaturation,
-            annealing, and extension) to mimic the DNA duplication process.
-            After amplification, the algorithm applies sequence alignment
-            methods to compare the synthesized DNA segments against a database
-            of known viral genomes. This enables the identification of specific
-            viral strains based on their genetic markers, allowing for the
-            detection of the COVID-19 virus in DNA samples.
-          </p>
+          <div class="button-container">
+            <button id="open-arduino">Learn More</button>
+
+            <div class="modal" id="modal-arduino">
+              <div class="modal-content">
+                <span class="close-arduino">&times;</span>
+                <p>
+                  I developed an algorithm that computationally simulates the
+                  Polymerase Chain Reaction (PCR) process, a fundamental
+                  technique in molecular biology for amplifying target DNA
+                  sequences. The model replicates the thermal cycling stages of
+                  PCR (denaturation, annealing, and extension) to mimic the DNA
+                  duplication process. After amplification, the algorithm
+                  applies sequence alignment methods to compare the synthesized
+                  DNA segments against a database of known viral genomes. This
+                  enables the identification of specific viral strains based on
+                  their genetic markers, allowing for the detection of the
+                  COVID-19 virus in DNA samples.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -149,6 +170,5 @@
 
     <!-- Custom JavaScript (projects.js) -->
     <script src="projects.js" charset="utf-8" defer></script>
-     
   </body>
 </html>
