@@ -3,8 +3,9 @@
   border-top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
   z-index: 10;
+  border-bottom: 2px solid black;
+  width: 90%;
 }
 
 .navbar a {
@@ -12,6 +13,10 @@
   font-size: 18px;
   padding: 14px 20px;
   text-decoration: none;
+}
+
+.navbar .nav-link {
+  color: black;
 }
 
 .navbar a:hover {
@@ -97,11 +102,12 @@ main {
 }
 
 h1 {
-  font-size: 2.5rem;
+  text-align: left;
+  font-size: 5rem;
   font-weight: bold;
   color: black;
-  padding-top: 40px;
   padding-bottom: 10px;
+  padding-left: 20px;
 }
 
 body {
