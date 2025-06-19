@@ -1,0 +1,187 @@
+/* navigation bar */
+.navbar {
+  border-top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 2px solid black;
+  width: 90%;
+}
+
+/* Style for your name */
+.navbar-brand {
+  color: black; /* Or any color you prefer for your name */
+  font-size: 24px; /* Adjust font size as needed */
+}
+
+/* On smaller screens, adjust the navbar-brand padding to fit next to the toggler */
+@media (max-width: 575.98px) {
+  /* This targets screens smaller than Bootstrap's 'sm' breakpoint */
+  .navbar-brand {
+    padding-left: 10px; /* Adjust as needed for spacing next to the toggler */
+    margin-right: auto; /* Pushes the brand to the right of the toggler */
+  }
+}
+
+.navbar a {
+  color: grey;
+  font-size: 18px;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar .nav-link {
+  color: black;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Adds hover effect */
+}
+
+/* main body */
+main {
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+  padding: 5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  text-align: left;
+  font-size: 5rem;
+  font-weight: bold;
+  color: black;
+  padding-left: 20px;
+}
+
+h2 {
+  padding-bottom: 20px;
+  padding-left: 5%;
+  line-height: 26px;
+  font-size: 2.5rem;
+  color: black;
+}
+
+h3 {
+  line-height: 26px;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-bottom: 5px;
+  font-size: 1.7rem;
+  color: black;
+}
+
+h4 {
+  line-height: 26px;
+  padding-left: 5%;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  color: black;
+}
+
+p {
+  line-height: 26px;
+  padding-left: 5%;
+  padding-bottom: 15px;
+  font-size: 1.2rem;
+  color: black;
+}
+
+section {
+  padding-bottom: 5%;
+}
+
+/* slideshows */
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow image container sizing */
+.mySlides1,
+.mySlides2 {
+  display: none; /* Keep this for the slideshow functionality */
+  /* Define a fixed height for your image frame */
+  height: 600px; /* Adjust this value to your desired height */
+  width: 100%; /* Make it fill the container's width */
+  overflow: hidden; /* Hide any parts of the image that go outside this box */
+  display: flex; /* Use flexbox to center the image within the div */
+  align-items: center; /* Vertically center the image */
+  justify-content: center; /* Horizontally center the image */
+  margin-bottom: 10%;
+}
+
+img {
+  width: 100%; /* Make the image take 100% of the container's width */
+  height: 100%; /* Make the image take 100% of the container's height */
+  object-fit: cover;
+  vertical-align: middle;
+  object-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust 768px to your desired breakpoint */
+  .slideshow-container {
+    width: 90%; /* Make the container 90% of the viewport width */
+    /* No need for max-width here, as width will take precedence */
+  }
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover,
+.next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+/* bottom of page */
+footer {
+  text-align: center;
+  width: 90%;
+  border-top: 2px solid black;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+h5 {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  color: black;
+  font-size: 1rem;
+}
