@@ -29,7 +29,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="index.html">erin lee</a>
+        <a class="navbar-brand" href="./">erin lee</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -44,7 +44,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">about</a>
+              <a class="nav-link" href="./">about</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="projects.html">projects</a>
@@ -72,8 +72,46 @@
     <section class="projects-section">
       <div class="container">
         <div class="projects-grid">
+          <!-- Project: The Morning AI -->
+          <article class="project-card" data-reveal>
+            <div class="project-image-wrapper project-placeholder">
+              <div class="placeholder-text">The Morning AI</div>
+              <div class="project-overlay">
+                <button class="btn-learn-more" id="open-morningai">
+                  Read More
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="active-badge">Active</span>
+              </div>
+              <h2 class="project-title">The Morning AI</h2>
+              <p class="project-description">
+                An autonomous multi-agent system where a team of LLM agents
+                scans Hacker News, arXiv, and GitHub each morning, decides
+                what's worth reading, and publishes a single robotics & AI
+                briefing to a static site.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Agentic AI</span>
+                <span class="tech-tag">LLM</span>
+                <span class="tech-tag">ReAct</span>
+              </div>
+              <div class="card-links">
+                <a
+                  href="https://github.com/erinlee316/morning-ai"
+                  target="_blank"
+                  class="card-link card-link-github"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </article>
+
           <!-- Project: Skincare Recommendation System -->
-          <article class="project-card">
+          <article class="project-card" data-reveal data-reveal-delay="1">
             <div class="project-image-wrapper">
               <img
                 src="images/skin2care.jpg"
@@ -119,7 +157,7 @@
           </article>
 
           <!-- Project: BERT Contextual Embeddings -->
-          <article class="project-card">
+          <article class="project-card" data-reveal data-reveal-delay="2">
             <div class="project-image-wrapper">
               <img
                 src="images/layer_tsne.jpg"
@@ -156,7 +194,7 @@
           </article>
 
           <!-- Project: Food Trend Forecaster -->
-          <article class="project-card">
+          <article class="project-card" data-reveal data-reveal-delay="3">
             <div class="project-image-wrapper project-placeholder">
               <div class="placeholder-text">Food Trend Forecaster</div>
               <div class="project-overlay">
@@ -195,7 +233,7 @@
           </article>
 
           <!-- Project: Arduino PCR COVID-19 Detector -->
-          <article class="project-card">
+          <article class="project-card" data-reveal data-reveal-delay="4">
             <div class="project-image-wrapper">
               <img
                 src="images/pcr.jpg"
@@ -316,6 +354,45 @@
       </div>
     </div>
 
+    <!-- Modal: The Morning AI -->
+    <div class="modal-overlay" id="modal-morningai">
+      <div class="modal-card">
+        <button class="modal-close close-morningai" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h3 class="modal-title">The Morning AI</h3>
+        <div class="modal-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Agentic AI</span>
+          <span class="tech-tag">LLM</span>
+          <span class="tech-tag">ReAct</span>
+          <span class="tech-tag">Groq</span>
+          <span class="tech-tag">Multi-Agent</span>
+        </div>
+        <p class="modal-text">
+          A daily, autonomous research briefing on robotics and AI. Every
+          morning a small team of LLM agents scans Hacker News, arXiv, and
+          GitHub, decides what's actually worth reading, summarizes it, and
+          publishes a single short report to a static site.
+          <br /><br />
+          The pipeline runs in two phases. First, three source curators (HN,
+          arXiv, and GitHub) each pre-rank their candidates and ask the model to
+          pick the standouts — a code-level marketing filter runs first so
+          promotional content never reaches the LLM. Then a ReAct-style
+          orchestrator reasons one step at a time — scoring each item for
+          signal, drafting and reviewing a summary, and synthesizing everything
+          into one briefing — reading progress from JSONL files each turn
+          instead of holding it all in memory.
+          <br /><br />
+          Each role runs on Groq's LLaMA 3.3 70B with its own API key so rate
+          limits stay isolated per agent. Strict output validation rejects
+          empty, too-short, or malformed model output before it's written, and a
+          failed run stops itself instead of publishing something unreliable — a
+          complete agentic system built end to end.
+        </p>
+      </div>
+    </div>
+
     <!-- Modal: Skincare -->
     <div class="modal-overlay" id="modal-skincare">
       <div class="modal-card">
@@ -389,5 +466,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="projects.js" charset="utf-8" defer></script>
+    <script src="reveal.js" charset="utf-8" defer></script>
   </body>
 </html>
