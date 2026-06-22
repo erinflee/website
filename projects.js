@@ -1,4 +1,5 @@
 const modals = [
+  { open: 'open-morningai', modal: 'modal-morningai', close: 'close-morningai' },
   { open: 'open-skincare', modal: 'modal-skincare', close: 'close-skincare' },
   { open: 'open-arduino',  modal: 'modal-arduino',  close: 'close-arduino'  },
   { open: 'open-bert',     modal: 'modal-bert',     close: 'close-bert'     },
