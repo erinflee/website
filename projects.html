@@ -271,8 +271,8 @@
                 data pipeline to validate thermal accuracy.
               </p>
               <div class="tech-tags">
-                <span class="tech-tag">Sensor Pipelines </span>
-                <span class="tech-tag">Close-Loop Control</span>
+                <span class="tech-tag">Sensor Pipelines</span>
+                <span class="tech-tag">Closed-Loop Control</span>
                 <span class="tech-tag">Time-Series Analysis</span>
                 <span class="tech-tag">Embedded C++</span>
                 <span class="tech-tag">Python / Data Viz</span>
@@ -296,79 +296,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Modal: Food Trend Forecaster -->
-    <div class="modal-overlay" id="modal-food">
-      <div class="modal-card">
-        <button class="modal-close close-food" aria-label="Close">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <h3 class="modal-title">Viral Food Trend Forecaster</h3>
-        <div class="modal-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Random Forest</span>
-          <span class="tech-tag">Prophet</span>
-          <span class="tech-tag">Time Series Forecasting</span>
-          <span class="tech-tag">Pandas</span>
-        </div>
-        <p class="modal-text">
-          A full end-to-end data science app that predicts which food trends are
-          emerging before they go mainstream. I track 150+ keywords — from
-          birria tacos to pistachio cream — by pulling 5 years of weekly Google
-          Trends data via the pytrends API, batching requests to work around
-          rate limits.
-          <br /><br />
-          The ML pipeline has two layers. A Random Forest Regressor (200
-          estimators) is trained on engineered features — growth rate,
-          acceleration, momentum, volatility, and ratio to historical peak — to
-          predict each keyword's Google Trends score 8 weeks ahead. Data-driven
-          thresholds (computed from training quantiles, not hardcoded rules)
-          then classify each trend into a phase: emerging, peaking, declining,
-          stable, or dormant. A separate Facebook Prophet model generates a
-          12-week forecast with an 80% confidence interval for any selected
-          keyword.
-          <br /><br />
-          The Streamlit dashboard lets users search any food in real time, see
-          its current phase and 4-week growth, and view a live forecast chart —
-          all cached so the app stays fast between interactions.
-        </p>
-      </div>
-    </div>
-
-    <!-- Modal: BERT -->
-    <div class="modal-overlay" id="modal-bert">
-      <div class="modal-card">
-        <button class="modal-close close-bert" aria-label="Close">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <h3 class="modal-title">Contextual Embeddings Explorer</h3>
-        <div class="modal-tags">
-          <span class="tech-tag">BERT</span>
-          <span class="tech-tag">Hugging Face</span>
-          <span class="tech-tag">Contextual Embeddings</span>
-          <span class="tech-tag">PyTorch</span>
-          <span class="tech-tag">NLP</span>
-        </div>
-        <p class="modal-text">
-          I built a pipeline to explore how BERT's contextual embeddings capture
-          word meaning differently depending on context. I chose the word
-          "layer" — a term that appears across ML, science, cooking, and
-          skincare — and collected 459 sentences from Wikipedia using its API,
-          spanning all four domains.
-          <br /><br />
-          Using a pretrained BERT model, I extracted 768-dimensional embeddings
-          for each occurrence of "layer" and applied t-SNE to reduce them to 2D
-          for visualization. The resulting clusters reveal that BERT treats
-          "layer" very differently depending on context: ML/AI forms a tight,
-          isolated cluster (driven by specialized vocabulary like
-          <em>weights, attention, gradient</em>), while science and skincare
-          overlap due to their shared biological framing. Nearest-neighbor
-          analysis confirmed that sentences about neural network layers
-          consistently retrieve other ML sentences — even though the surface
-          word is identical across all domains.
-        </p>
-      </div>
-    </div>
 
     <!-- Modal: The Morning AI -->
     <div class="modal-overlay" id="modal-morningai">
@@ -437,6 +364,79 @@
       </div>
     </div>
 
+    <!-- Modal: BERT -->
+    <div class="modal-overlay" id="modal-bert">
+      <div class="modal-card">
+        <button class="modal-close close-bert" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h3 class="modal-title">Contextual Embeddings Explorer</h3>
+        <div class="modal-tags">
+          <span class="tech-tag">BERT</span>
+          <span class="tech-tag">Hugging Face</span>
+          <span class="tech-tag">Contextual Embeddings</span>
+          <span class="tech-tag">PyTorch</span>
+          <span class="tech-tag">NLP</span>
+        </div>
+        <p class="modal-text">
+          I built a pipeline to explore how BERT's contextual embeddings capture
+          word meaning differently depending on context. I chose the word
+          "layer" — a term that appears across ML, science, cooking, and
+          skincare — and collected 459 sentences from Wikipedia using its API,
+          spanning all four domains.
+          <br /><br />
+          Using a pretrained BERT model, I extracted 768-dimensional embeddings
+          for each occurrence of "layer" and applied t-SNE to reduce them to 2D
+          for visualization. The resulting clusters reveal that BERT treats
+          "layer" very differently depending on context: ML/AI forms a tight,
+          isolated cluster (driven by specialized vocabulary like
+          <em>weights, attention, gradient</em>), while science and skincare
+          overlap due to their shared biological framing. Nearest-neighbor
+          analysis confirmed that sentences about neural network layers
+          consistently retrieve other ML sentences — even though the surface
+          word is identical across all domains.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal: Food Trend Forecaster -->
+    <div class="modal-overlay" id="modal-food">
+      <div class="modal-card">
+        <button class="modal-close close-food" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h3 class="modal-title">Viral Food Trend Forecaster</h3>
+        <div class="modal-tags">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Random Forest</span>
+          <span class="tech-tag">Prophet</span>
+          <span class="tech-tag">Time Series Forecasting</span>
+          <span class="tech-tag">Pandas</span>
+        </div>
+        <p class="modal-text">
+          A full end-to-end data science app that predicts which food trends are
+          emerging before they go mainstream. I track 150+ keywords — from
+          birria tacos to pistachio cream — by pulling 5 years of weekly Google
+          Trends data via the pytrends API, batching requests to work around
+          rate limits.
+          <br /><br />
+          The ML pipeline has two layers. A Random Forest Regressor (200
+          estimators) is trained on engineered features — growth rate,
+          acceleration, momentum, volatility, and ratio to historical peak — to
+          predict each keyword's Google Trends score 8 weeks ahead. Data-driven
+          thresholds (computed from training quantiles, not hardcoded rules)
+          then classify each trend into a phase: emerging, peaking, declining,
+          stable, or dormant. A separate Facebook Prophet model generates a
+          12-week forecast with an 80% confidence interval for any selected
+          keyword.
+          <br /><br />
+          The Streamlit dashboard lets users search any food in real time, see
+          its current phase and 4-week growth, and view a live forecast chart —
+          all cached so the app stays fast between interactions.
+        </p>
+      </div>
+    </div>
+
     <!-- Modal: Arduino PCR -->
     <div class="modal-overlay" id="modal-arduino">
       <div class="modal-card">
@@ -445,8 +445,8 @@
         </button>
         <h3 class="modal-title">Arduino PCR Thermocycler</h3>
         <div class="modal-tags">
-          <span class="tech-tag">Sensor Pipelines </span>
-          <span class="tech-tag">Close-Loop Control</span>
+          <span class="tech-tag">Sensor Pipelines</span>
+          <span class="tech-tag">Closed-Loop Control</span>
           <span class="tech-tag">Time-Series Analysis</span>
           <span class="tech-tag">Embedded C++</span>
           <span class="tech-tag">Python / Data Viz</span>
